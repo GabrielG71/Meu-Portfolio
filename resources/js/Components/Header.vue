@@ -72,18 +72,115 @@
               </a>
             </div>
             
-            <Link 
-              :href="route('login')" 
-              class="bg-gradient-to-r from-blue-500 to-purple-600 px-4 py-2 rounded-lg hover:scale-105 transition-transform"
-            >
-              Login
-            </Link>
-            <Link 
-              :href="route('register')" 
-              class="bg-gradient-to-r from-blue-500 to-purple-600 px-4 py-2 rounded-lg hover:scale-105 transition-transform"
-            >
-              Registrar
-            </Link>
+            <!-- Auth Section -->
+            <div v-if="$page.props.auth.user" class="relative">
+              <!-- User Dropdown -->
+              <div 
+                @mouseenter="showDropdown = true"
+                @mouseleave="showDropdown = false"
+                class="relative"
+              >
+                <button 
+                  class="flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-purple-600/20 px-4 py-2 rounded-lg border border-blue-500/30 hover:from-blue-500/30 hover:to-purple-600/30 transition-all duration-300 hover:scale-105 group"
+                >
+                  <!-- User Icon -->
+                  <div class="w-8 h-8 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center">
+                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                  </div>
+                  
+                  <!-- User Name -->
+                  <span class="text-gray-200 font-medium">
+                    {{ $page.props.auth.user.name }}
+                  </span>
+                  
+                  <!-- Dropdown Arrow -->
+                  <svg 
+                    class="w-4 h-4 text-gray-400 transition-transform duration-200 group-hover:text-blue-400"
+                    :class="{ 'rotate-180': showDropdown }"
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                
+                <!-- Dropdown Menu -->
+                <transition
+                  enter-active-class="transition ease-out duration-200"
+                  enter-from-class="transform opacity-0 scale-95"
+                  enter-to-class="transform opacity-100 scale-100"
+                  leave-active-class="transition ease-in duration-150"
+                  leave-from-class="transform opacity-100 scale-100"
+                  leave-to-class="transform opacity-0 scale-95"
+                >
+                  <div 
+                    v-show="showDropdown"
+                    class="absolute right-0 mt-2 w-56 bg-gray-800/95 backdrop-blur-sm rounded-lg shadow-xl border border-gray-700 py-2 z-50"
+                  >
+                    <!-- User Info -->
+                    <div class="px-4 py-3 border-b border-gray-700">
+                      <p class="text-sm font-medium text-white">{{ $page.props.auth.user.name }}</p>
+                      <p class="text-xs text-gray-400 truncate">{{ $page.props.auth.user.email }}</p>
+                    </div>
+                    
+                    <!-- Menu Items -->
+                    <div class="py-1">
+                      <Link 
+                        :href="route('profile.edit')"
+                        class="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-gray-700/50 hover:text-blue-400 transition-colors"
+                      >
+                        <svg class="w-4 h-4 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                        Perfil
+                      </Link>
+                      
+                      <Link 
+                        :href="route('dashboard')"
+                        class="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-gray-700/50 hover:text-blue-400 transition-colors"
+                      >
+                        <svg class="w-4 h-4 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5a2 2 0 012-2h4a2 2 0 012 2v6H8V5z" />
+                        </svg>
+                        Dashboard
+                      </Link>
+                    </div>
+                    
+                    <div class="border-t border-gray-700 pt-1">
+                      <button
+                        @click="logout"
+                        class="flex items-center w-full px-4 py-2 text-sm text-red-400 hover:bg-red-500/10 hover:text-red-300 transition-colors"
+                      >
+                        <svg class="w-4 h-4 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                        </svg>
+                        Sair
+                      </button>
+                    </div>
+                  </div>
+                </transition>
+              </div>
+            </div>
+            
+            <!-- Login/Register Buttons (quando não logado) -->
+            <div v-else class="flex items-center space-x-3">
+              <Link 
+                :href="route('login')" 
+                class="bg-gradient-to-r from-blue-500 to-purple-600 px-4 py-2 rounded-lg hover:scale-105 transition-transform text-white font-medium"
+              >
+                Login
+              </Link>
+              <Link 
+                :href="route('register')" 
+                class="bg-gradient-to-r from-blue-500 to-purple-600 px-4 py-2 rounded-lg hover:scale-105 transition-transform text-white font-medium"
+              >
+                Registrar
+              </Link>
+            </div>
           </div>
         </div>
         <div class="md:hidden">
@@ -101,6 +198,10 @@
 <script setup>
 import { Link } from '@inertiajs/vue3'
 import { router } from '@inertiajs/vue3'
+import { ref } from 'vue'
+
+// Estado do dropdown
+const showDropdown = ref(false)
 
 // Função para navegar para as seções
 const navigateToSection = (section) => {
@@ -115,5 +216,10 @@ const navigateToSection = (section) => {
     // Se não está na welcome, navega para lá com a âncora
     router.visit(`/#${section}`)
   }
+}
+
+// Função de logout
+const logout = () => {
+  router.post(route('logout'))
 }
 </script>
