@@ -14,7 +14,7 @@ use Inertia\Response;
 class AuthenticatedSessionController extends Controller
 {
     /**
-     * Display the login view.
+     * Exibe a tela de login.
      */
     public function create(): Response
     {
@@ -25,19 +25,28 @@ class AuthenticatedSessionController extends Controller
     }
 
     /**
-     * Handle an incoming authentication request.
+     * Processa a autenticação do usuário.
      */
     public function store(LoginRequest $request): RedirectResponse
     {
+        // Autentica o usuário
         $request->authenticate();
 
+        // Regenera a sessão
         $request->session()->regenerate();
+
+        // Verifica o e-mail e redireciona
+        $user = Auth::user();
+
+        if ($user->email === 'gabrielgoncalves2851@gmail.com') {
+            return redirect()->intended(route('admin.index', absolute: false));
+        }
 
         return redirect()->intended(route('dashboard', absolute: false));
     }
 
     /**
-     * Destroy an authenticated session.
+     * Encerra a sessão autenticada.
      */
     public function destroy(Request $request): RedirectResponse
     {

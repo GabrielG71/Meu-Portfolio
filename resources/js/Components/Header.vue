@@ -73,7 +73,7 @@
             </div>
             
             <!-- Auth Section -->
-            <div v-if="$page.props.auth.user" class="relative">
+            <div v-if="page.props.auth?.user" class="relative">
               <!-- User Dropdown -->
               <div 
                 @mouseenter="showDropdown = true"
@@ -92,7 +92,7 @@
                   
                   <!-- User Name -->
                   <span class="text-gray-200 font-medium">
-                    {{ $page.props.auth.user.name }}
+                    {{ page.props.auth.user.name }}
                   </span>
                   
                   <!-- Dropdown Arrow -->
@@ -122,8 +122,8 @@
                   >
                     <!-- User Info -->
                     <div class="px-4 py-3 border-b border-gray-700">
-                      <p class="text-sm font-medium text-white">{{ $page.props.auth.user.name }}</p>
-                      <p class="text-xs text-gray-400 truncate">{{ $page.props.auth.user.email }}</p>
+                      <p class="text-sm font-medium text-white">{{ page.props.auth.user.name }}</p>
+                      <p class="text-xs text-gray-400 truncate">{{ page.props.auth.user.email }}</p>
                     </div>
                     
                     <!-- Menu Items -->
@@ -138,16 +138,17 @@
                         Perfil
                       </Link>
                       
-                      <Link 
-                        :href="route('dashboard')"
-                        class="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-gray-700/50 hover:text-blue-400 transition-colors"
+                      <!-- Dashboard/Admin Link with conditional routing -->
+                      <button
+                        @click="navigateToDashboard"
+                        class="flex items-center w-full px-4 py-2 text-sm text-gray-300 hover:bg-gray-700/50 hover:text-blue-400 transition-colors"
                       >
                         <svg class="w-4 h-4 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5a2 2 0 012-2h4a2 2 0 012 2v6H8V5z" />
                         </svg>
-                        Dashboard
-                      </Link>
+                        {{ isAdmin ? 'Admin' : 'Dashboard' }}
+                      </button>
                     </div>
                     
                     <div class="border-t border-gray-700 pt-1">
@@ -196,12 +197,20 @@
 </template>
 
 <script setup>
-import { Link } from '@inertiajs/vue3'
+import { Link, usePage } from '@inertiajs/vue3'
 import { router } from '@inertiajs/vue3'
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+
+// Obter dados da página atual
+const page = usePage()
 
 // Estado do dropdown
 const showDropdown = ref(false)
+
+// Computed para verificar se é admin
+const isAdmin = computed(() => {
+  return page.props.auth?.user?.email === 'gabrielgoncalves2851@gmail.com'
+})
 
 // Função para navegar para as seções
 const navigateToSection = (section) => {
@@ -215,6 +224,17 @@ const navigateToSection = (section) => {
   } else {
     // Se não está na welcome, navega para lá com a âncora
     router.visit(`/#${section}`)
+  }
+}
+
+// Função para navegar para Dashboard ou Admin
+const navigateToDashboard = () => {
+  if (isAdmin.value) {
+    // Redireciona para a rota admin
+    router.visit(route('admin.index'))
+  } else {
+    // Redireciona para o dashboard normal
+    router.visit(route('dashboard'))
   }
 }
 
