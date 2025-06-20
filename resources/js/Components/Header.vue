@@ -9,11 +9,42 @@
         </div>
         <div class="hidden md:block">
           <div class="flex items-center space-x-6">
-            <a href="#inicio" class="hover:text-blue-400 transition-colors">Início</a>
-            <a href="#sobre" class="hover:text-blue-400 transition-colors">Sobre</a>
-            <a href="#servicos" class="hover:text-blue-400 transition-colors">Serviços</a>
-            <a href="#projetos" class="hover:text-blue-400 transition-colors">Projetos</a>
-            <a href="#contato" class="hover:text-blue-400 transition-colors">Contato</a>
+            <!-- Links usando window.location para garantir funcionamento -->
+            <a 
+              @click.prevent="navigateToSection('inicio')" 
+              href="#" 
+              class="hover:text-blue-400 transition-colors cursor-pointer"
+            >
+              Início
+            </a>
+            <a 
+              @click.prevent="navigateToSection('sobre')" 
+              href="#" 
+              class="hover:text-blue-400 transition-colors cursor-pointer"
+            >
+              Sobre
+            </a>
+            <a 
+              @click.prevent="navigateToSection('servicos')" 
+              href="#" 
+              class="hover:text-blue-400 transition-colors cursor-pointer"
+            >
+              Serviços
+            </a>
+            <a 
+              @click.prevent="navigateToSection('projetos')" 
+              href="#" 
+              class="hover:text-blue-400 transition-colors cursor-pointer"
+            >
+              Projetos
+            </a>
+            <a 
+              @click.prevent="navigateToSection('contato')" 
+              href="#" 
+              class="hover:text-blue-400 transition-colors cursor-pointer"
+            >
+              Contato
+            </a>
             
             <!-- Links Sociais -->
             <div class="flex items-center space-x-3 pl-4 border-l border-gray-700">
@@ -69,4 +100,20 @@
 
 <script setup>
 import { Link } from '@inertiajs/vue3'
+import { router } from '@inertiajs/vue3'
+
+// Função para navegar para as seções
+const navigateToSection = (section) => {
+  // Verifica se já está na página welcome
+  if (window.location.pathname === '/') {
+    // Se já está na welcome, faz scroll para a seção
+    const element = document.getElementById(section)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  } else {
+    // Se não está na welcome, navega para lá com a âncora
+    router.visit(`/#${section}`)
+  }
+}
 </script>
