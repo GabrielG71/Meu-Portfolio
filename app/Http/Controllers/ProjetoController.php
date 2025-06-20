@@ -16,6 +16,11 @@ class ProjetoController extends Controller
             'objetivo' => 'required|string|max:255',
         ]);
 
+        // Impedir duplicação
+        if (Projeto::where('user_id', auth()->id())->exists()) {
+            return redirect()->back()->withErrors(['projeto' => 'Você já criou um projeto.']);
+        }
+
         Projeto::create([
             'nome' => $request->nome,
             'necessidade' => $request->necessidade,
@@ -25,6 +30,7 @@ class ProjetoController extends Controller
 
         return redirect()->back()->with('success', 'Projeto criado com sucesso!');
     }
+
     public function index()
     {
         return Inertia::render('Admin', [
@@ -54,4 +60,15 @@ class ProjetoController extends Controller
 
         return redirect()->back()->with('success', 'Projeto removido com sucesso!');
     }
+
+    public function meuProjeto()
+    {
+        $projeto = Projeto::where('user_id', auth()->id())->first();
+
+        return Inertia::render('Dashboard', [
+            'user' => auth()->user(),
+            'projeto' => $projeto
+        ]);
+    }
+
 }

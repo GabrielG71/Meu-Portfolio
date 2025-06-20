@@ -35,4 +35,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 Route::middleware(['auth', 'verified'])->get('/admin', [AdminController::class, 'index'])->name('admin.index');
 
+Route::get('/dashboard', [ProjetoController::class, 'meuProjeto'])->middleware(['auth', 'verified'])->name('dashboard');
+
 require __DIR__.'/auth.php';
