@@ -12,4 +12,10 @@ class Projeto extends Model
     protected $fillable = [
         'nome', 'necessidade', 'objetivo', 'user_id',
     ];
+
+    public function cancelamento()
+    {
+        return $this->hasOne(Cancelamento::class);
+    }
+
 }
