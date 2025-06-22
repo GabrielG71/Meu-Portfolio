@@ -194,12 +194,121 @@
     <section id="contato" class="py-20 bg-gray-900">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">Vamos Conversar?</h2>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Vamos Conversar?</h2>
           <p class="text-xl text-gray-400">Estou pronto para transformar sua ideia em realidade</p>
-          <div class="text-center">
-            <button type="submit" class="bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-3 rounded-lg font-semibold hover:scale-105 transition-transform">
-              Enviar Mensagem
-            </button>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Formulário de Contato Rápido -->
+          <div class="bg-gray-800 rounded-xl p-8 border border-gray-700">
+            <h3 class="text-2xl font-semibold mb-6 text-white">Contato Rápido</h3>
+            <p class="text-gray-400 mb-6">Envie sua mensagem e receba resposta no seu e-mail</p>
+            
+            <form @submit.prevent="submitQuickContact" class="space-y-6">
+              <div>
+                <label for="quick_name" class="block text-sm font-medium text-gray-300 mb-2">
+                  Nome
+                </label>
+                <input
+                  id="quick_name"
+                  v-model="quickForm.name"
+                  type="text"
+                  required
+                  class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Seu nome completo"
+                />
+              </div>
+
+              <div>
+                <label for="quick_email" class="block text-sm font-medium text-gray-300 mb-2">
+                  E-mail
+                </label>
+                <input
+                  id="quick_email"
+                  v-model="quickForm.email"
+                  type="email"
+                  required
+                  class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="seu@email.com"
+                />
+              </div>
+
+              <div>
+                <label for="quick_message" class="block text-sm font-medium text-gray-300 mb-2">
+                  Mensagem
+                </label>
+                <textarea
+                  id="quick_message"
+                  v-model="quickForm.message"
+                  required
+                  rows="4"
+                  class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                  placeholder="Descreva seu projeto ou dúvida..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                :disabled="isSubmittingQuick"
+                class="w-full bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-3 rounded-lg font-semibold text-white hover:scale-105 transition-transform disabled:opacity-50 disabled:hover:scale-100"
+              >
+                <span v-if="isSubmittingQuick">Enviando...</span>
+                <span v-else>Enviar Mensagem</span>
+              </button>
+            </form>
+
+            <!-- Mensagem de sucesso/erro -->
+            <div v-if="quickMessage" class="mt-4 p-4 rounded-lg" :class="quickMessageType === 'success' ? 'bg-green-900 text-green-300' : 'bg-red-900 text-red-300'">
+              {{ quickMessage }}
+            </div>
+          </div>
+
+          <!-- Experiência Completa -->
+          <div class="bg-gray-800 rounded-xl p-8 border border-gray-700">
+            <h3 class="text-2xl font-semibold mb-6 text-white">Experiência Completa</h3>
+            <p class="text-gray-400 mb-6">Acesse o dashboard para um contato mais detalhado e acompanhe o progresso do seu projeto</p>
+            
+            <div class="space-y-6">
+              <div class="bg-gray-700 rounded-lg p-4">
+                <h4 class="font-semibold text-white mb-2">✨ O que você terá:</h4>
+                <ul class="text-gray-300 space-y-2 text-sm">
+                  <li>• Mensagens diretas em tempo real</li>
+                  <li>• Dashboard personalizado do projeto</li>
+                  <li>• Histórico completo de conversas</li>
+                  <li>• Acompanhamento de progresso</li>
+                </ul>
+              </div>
+
+              <!-- Se não estiver logado -->
+              <div v-if="!$page.props.auth.user" class="space-y-4">
+                <p class="text-gray-400 text-sm">Faça login ou crie uma conta para acessar:</p>
+                <div class="flex gap-3">
+                  <Link
+                    :href="route('login')"
+                    class="flex-1 bg-blue-600 hover:bg-blue-700 px-4 py-3 rounded-lg font-semibold text-white text-center transition-colors"
+                  >
+                    Entrar
+                  </Link>
+                  <Link
+                    :href="route('register')"
+                    class="flex-1 bg-gray-600 hover:bg-gray-700 px-4 py-3 rounded-lg font-semibold text-white text-center transition-colors"
+                  >
+                    Criar Conta
+                  </Link>
+                </div>
+              </div>
+
+              <!-- Se estiver logado -->
+              <div v-else>
+                <p class="text-green-400 mb-4">✓ Você está logado como {{ $page.props.auth.user.name }}</p>
+                <Link
+                  :href="route('dashboard')"
+                  class="w-full bg-gradient-to-r from-green-500 to-blue-600 px-6 py-3 rounded-lg font-semibold text-white hover:scale-105 transition-transform inline-block text-center"
+                >
+                  Acessar Dashboard
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -269,6 +378,45 @@ const stopSlideshow = () => {
   }
 }
 
+const quickForm = ref({
+  name: '',
+  email: '',
+  message: ''
+})
+
+const isSubmittingQuick = ref(false)
+const quickMessage = ref('')
+const quickMessageType = ref('')
+
+const submitQuickContact = async () => {
+  isSubmittingQuick.value = true
+  quickMessage.value = ''
+  
+  try {
+    await router.post('/contact/quick', quickForm.value, {
+      onSuccess: () => {
+        quickForm.value = { name: '', email: '', message: '' }
+        quickMessage.value = 'Mensagem enviada com sucesso! Responderemos em breve.'
+        quickMessageType.value = 'success'
+      },
+      onError: (errors) => {
+        quickMessage.value = 'Erro ao enviar mensagem. Tente novamente.'
+        quickMessageType.value = 'error'
+      }
+    })
+  } catch (error) {
+    quickMessage.value = 'Erro ao enviar mensagem. Tente novamente.'
+    quickMessageType.value = 'error'
+  } finally {
+    isSubmittingQuick.value = false
+    
+    // Limpar mensagem após 5 segundos
+    setTimeout(() => {
+      quickMessage.value = ''
+    }, 5000)
+  }
+}
+
 // Lifecycle
 onMounted(() => {
   startSlideshow()
@@ -298,4 +446,5 @@ html {
   background: #4f46e5;
   border-radius: 4px;
 }
+
 </style>
