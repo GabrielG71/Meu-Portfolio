@@ -1,61 +1,187 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🚀 Portfólio - Gabriel Gonçalves
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> Desenvolvedor Web Full Stack em formação, especializado em Laravel, Vue.js e soluções seguras
 
-## About Laravel
+## 📋 Sobre o Projeto
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Este é meu portfólio pessoal, desenvolvido para apresentar meus serviços, projetos e habilidades como desenvolvedor web. O site foi construído com tecnologias modernas e foco em performance, segurança e experiência do usuário.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 👨‍💻 Sobre Mim
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Sou Gabriel Gonçalves, tenho 18 anos e atualmente curso **Análise e Desenvolvimento de Sistemas na Fatec de Ourinhos**. Mesmo em início de carreira, já desenvolvi diversos projetos com atenção aos detalhes, segurança e foco no cliente.
 
-## Learning Laravel
+### 🎯 Minhas Especialidades
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Desenvolvimento Web**: PHP com Laravel, JavaScript e Vue.js
+- **Segurança da Informação**: Hashing, criptografia e boas práticas de segurança
+- **DevOps**: Deploys, automatização e gerenciamento de ambientes
+- **Front-end Moderno**: Vue.js, Tailwind CSS e interfaces responsivas
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🛠️ Tecnologias Utilizadas
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Backend
+- **PHP** - Linguagem principal
+- **Laravel** - Framework PHP para desenvolvimento robusto
+- **Inertia.js** - Para integração SPA
 
-## Laravel Sponsors
+### Frontend
+- **Vue.js 3** - Framework JavaScript reativo
+- **Tailwind CSS** - Framework CSS utilitário
+- **Composition API** - Para lógica reativa moderna
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Ferramentas e Práticas
+- **Responsive Design** - Layout adaptável para todos os dispositivos
+- **Component Architecture** - Estrutura modular e reutilizável
+- **Modern CSS** - Gradientes, animações e efeitos visuais
+- **Performance Optimization** - Carregamento otimizado de recursos
 
-### Premium Partners
+## 🌟 Funcionalidades
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 🎨 Interface Moderna
+- Design dark com gradientes e efeitos visuais
+- Animações suaves e transições fluidas
+- Layout totalmente responsivo
+- Menu mobile interativo
 
-## Contributing
+### 🖼️ Carousel Interativo
+- Slideshow automático com navegação manual
+- Múltiplos slides apresentando diferentes aspectos do trabalho
+- Controles de navegação intuitivos
+- Transições suaves entre slides
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 📱 Experiência Mobile
+- Menu hamburger responsivo
+- Interface otimizada para touch
+- Performance otimizada para dispositivos móveis
 
-## Code of Conduct
+### 🔒 Boas Práticas de Segurança
+- Código limpo e estruturado
+- Validações do lado cliente
+- Práticas de segurança implementadas
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 💼 Serviços Oferecidos
 
-## Security Vulnerabilities
+### 🌐 Desenvolvimento Web
+Desenvolvimento de sites e sistemas web personalizados utilizando Laravel e tecnologias modernas. Código limpo, escalável e com foco em boa performance e experiência do usuário.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 🔐 Segurança de Sistemas
+Implementação de práticas de segurança, incluindo hashing, criptografia, proteção contra ataques comuns e validações seguras para garantir a integridade e proteção dos dados.
 
-## License
+### ☁️ DevOps & Deploy
+Configuração e gerenciamento de deploys para ambientes de produção. Automatização, hospedagem, integração com Git e aplicação de boas práticas de DevOps.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 📦 Pacote Completo
+Para quem busca uma solução completa: desenvolvimento front e back-end, segurança robusta e deploy funcional. Ideal para quem quer o site pronto para uso sem se preocupar com partes técnicas.
+
+## 🚀 Como Executar o Projeto
+
+### Pré-requisitos
+- PHP >= 8.1
+- Composer
+- Node.js >= 16
+- NPM ou Yarn
+
+### Instalação
+
+1. **Clone o repositório**
+```bash
+git clone https://github.com/usuario/portfolio-gabriel
+cd portfolio-gabriel
+```
+
+2. **Instale as dependências PHP**
+```bash
+composer install
+```
+
+3. **Instale as dependências JavaScript**
+```bash
+npm install
+```
+
+4. **Configure o ambiente**
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+5. **Execute as migrações** (se houver)
+```bash
+php artisan migrate
+```
+
+6. **Compile os assets**
+```bash
+npm run build
+# ou para desenvolvimento
+npm run dev
+```
+
+7. **Inicie o servidor**
+```bash
+php artisan serve
+```
+
+O site estará disponível em `http://localhost:8000`
+
+## 📁 Estrutura do Projeto
+
+```
+portfolio/
+├── app/                    # Lógica da aplicação Laravel
+├── resources/
+│   ├── js/
+│   │   ├── Components/     # Componentes Vue.js
+│   │   └── Pages/         # Páginas da aplicação
+│   ├── css/               # Estilos CSS
+│   └── views/             # Templates Blade
+├── public/                # Assets públicos
+├── routes/                # Definição de rotas
+└── package.json          # Dependências JavaScript
+```
+
+## 🎨 Design System
+
+### Cores Principais
+- **Primária**: Gradiente azul para roxo (`from-blue-500 to-purple-600`)
+- **Background**: Tons de cinza escuro (`gray-900`, `gray-800`)
+- **Texto**: Branco e tons de cinza para contraste
+- **Acentos**: Azul (`blue-400`), roxo (`purple-500`), verde (`green-400`)
+
+### Componentes Reutilizáveis
+- **Header**: Navegação principal com menu responsivo
+- **Footer**: Informações de contato e links
+- **Cards de Serviço**: Apresentação visual dos serviços oferecidos
+
+## 📞 Contato
+
+Interessado em trabalhar comigo? Entre em contato!
+
+- **Email**: [seu-email@exemplo.com]
+- **LinkedIn**: [Seu LinkedIn]
+- **GitHub**: [Seu GitHub]
+- **WhatsApp**: [Seu WhatsApp]
+
+---
+
+## 🚀 Status do Projeto
+
+🔄 **Em desenvolvimento ativo** - Sempre adicionando novos projetos e melhorias
+
+### Próximas Funcionalidades
+- [ ] Seção de projetos com detalhes
+- [ ] Blog integrado
+- [ ] Sistema de contato funcional
+- [ ] Integração com APIs de projetos GitHub
+- [ ] Modo claro/escuro
+- [ ] Otimizações de SEO
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+**Desenvolvido com ❤️ por Gabriel Gonçalves**
+
+> "Mesmo no início da carreira, busca pela excelência e comprometimento com resultados de qualidade."
