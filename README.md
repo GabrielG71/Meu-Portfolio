@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 Gabriel Gonçalves
+# Gabriel Gonçalves
 ### Desenvolvedor Web Full Stack
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=22&pause=1000&color=6366F1&center=true&vCenter=true&width=435&lines=Laravel+%7C+Vue.js+%7C+PHP;Segurança+%26+DevOps;Desenvolvedor+em+Ascensão" alt="Typing SVG" />
@@ -14,7 +14,7 @@
 
 <div align="center">
 
-## 🎯 Sobre Mim
+## Sobre Mim
 
 </div>
 
@@ -28,7 +28,7 @@
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 <div align="center">
 
@@ -53,7 +53,7 @@
 <tr>
 <td width="50%">
 
-## 💼 Meus Serviços
+## Meus Serviços
 
 🌐 **Desenvolvimento Web**  
 *Sites e sistemas com Laravel*
@@ -70,7 +70,7 @@
 </td>
 <td width="50%">
 
-## 📈 Foco Atual
+## Foco Atual
 
 ```javascript
 const gabriel = {
@@ -90,7 +90,7 @@ const gabriel = {
 
 <div align="center">
 
-## 🌟 Diferenciais
+## Diferenciais
 
 <table>
 <tr>
@@ -124,17 +124,6 @@ const gabriel = {
 <br><br>
 
 *"Estou pronto para transformar sua ideia em realidade"*
-
----
-
-<img src="https://github-readme-stats.vercel.app/api?username=seu-usuario&show_icons=true&theme=tokyonight&hide_border=true" width="48%" />
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=seu-usuario&theme=tokyonight&hide_border=true" width="48%" />
-
-<br>
-
-![](https://komarev.com/ghpvc/?username=seu-usuario&color=6366f1&style=for-the-badge)
-
-</div>
 
 ---
 
