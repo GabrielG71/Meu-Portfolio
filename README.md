@@ -18,16 +18,6 @@
 
 </div>
 
-```css
-.developer-card {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 15px;
-  padding: 20px;
-  color: white;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-```
-
 <div align="center">
   
 **18 anos** • **Estudante de ADS na Fatec Ourinhos** • **Apaixonado por tecnologia**
