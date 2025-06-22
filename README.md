@@ -1,187 +1,175 @@
-# 🚀 Portfólio - Gabriel Gonçalves
+<div align="center">
 
-> Desenvolvedor Web Full Stack em formação, especializado em Laravel, Vue.js e soluções seguras
+# 🚀 Gabriel Gonçalves
+### Desenvolvedor Web Full Stack
 
-## 📋 Sobre o Projeto
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=22&pause=1000&color=6366F1&center=true&vCenter=true&width=435&lines=Laravel+%7C+Vue.js+%7C+PHP;Segurança+%26+DevOps;Desenvolvedor+em+Ascensão" alt="Typing SVG" />
 
-Este é meu portfólio pessoal, desenvolvido para apresentar meus serviços, projetos e habilidades como desenvolvedor web. O site foi construído com tecnologias modernas e foco em performance, segurança e experiência do usuário.
+[![Website](https://img.shields.io/badge/🌐%20Website-gabrielgon.com.br-6366F1?style=for-the-badge)](https://gabrielgon.com.br)
+[![Email](https://img.shields.io/badge/📧%20Email-gabrielgoncalves2981@gmail.com-EA4335?style=for-the-badge)](mailto:gabrielgoncalves2981@gmail.com)
 
-## 👨‍💻 Sobre Mim
+</div>
 
-Sou Gabriel Gonçalves, tenho 18 anos e atualmente curso **Análise e Desenvolvimento de Sistemas na Fatec de Ourinhos**. Mesmo em início de carreira, já desenvolvi diversos projetos com atenção aos detalhes, segurança e foco no cliente.
+---
 
-### 🎯 Minhas Especialidades
+<div align="center">
 
-- **Desenvolvimento Web**: PHP com Laravel, JavaScript e Vue.js
-- **Segurança da Informação**: Hashing, criptografia e boas práticas de segurança
-- **DevOps**: Deploys, automatização e gerenciamento de ambientes
-- **Front-end Moderno**: Vue.js, Tailwind CSS e interfaces responsivas
+## 🎯 Sobre Mim
 
-## 🛠️ Tecnologias Utilizadas
+</div>
+
+```css
+.developer-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+```
+
+<div align="center">
+  
+**18 anos** • **Estudante de ADS na Fatec Ourinhos** • **Apaixonado por tecnologia**
+
+*Mesmo no início da carreira, já desenvolvo projetos com atenção aos detalhes, segurança e foco no cliente.*
+
+</div>
+
+---
+
+## 🛠️ Tech Stack
+
+<div align="center">
 
 ### Backend
-- **PHP** - Linguagem principal
-- **Laravel** - Framework PHP para desenvolvimento robusto
-- **Inertia.js** - Para integração SPA
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
 
 ### Frontend
-- **Vue.js 3** - Framework JavaScript reativo
-- **Tailwind CSS** - Framework CSS utilitário
-- **Composition API** - Para lógica reativa moderna
+![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-### Ferramentas e Práticas
-- **Responsive Design** - Layout adaptável para todos os dispositivos
-- **Component Architecture** - Estrutura modular e reutilizável
-- **Modern CSS** - Gradientes, animações e efeitos visuais
-- **Performance Optimization** - Carregamento otimizado de recursos
+### DevOps & Security
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
-## 🌟 Funcionalidades
-
-### 🎨 Interface Moderna
-- Design dark com gradientes e efeitos visuais
-- Animações suaves e transições fluidas
-- Layout totalmente responsivo
-- Menu mobile interativo
-
-### 🖼️ Carousel Interativo
-- Slideshow automático com navegação manual
-- Múltiplos slides apresentando diferentes aspectos do trabalho
-- Controles de navegação intuitivos
-- Transições suaves entre slides
-
-### 📱 Experiência Mobile
-- Menu hamburger responsivo
-- Interface otimizada para touch
-- Performance otimizada para dispositivos móveis
-
-### 🔒 Boas Práticas de Segurança
-- Código limpo e estruturado
-- Validações do lado cliente
-- Práticas de segurança implementadas
-
-## 💼 Serviços Oferecidos
-
-### 🌐 Desenvolvimento Web
-Desenvolvimento de sites e sistemas web personalizados utilizando Laravel e tecnologias modernas. Código limpo, escalável e com foco em boa performance e experiência do usuário.
-
-### 🔐 Segurança de Sistemas
-Implementação de práticas de segurança, incluindo hashing, criptografia, proteção contra ataques comuns e validações seguras para garantir a integridade e proteção dos dados.
-
-### ☁️ DevOps & Deploy
-Configuração e gerenciamento de deploys para ambientes de produção. Automatização, hospedagem, integração com Git e aplicação de boas práticas de DevOps.
-
-### 📦 Pacote Completo
-Para quem busca uma solução completa: desenvolvimento front e back-end, segurança robusta e deploy funcional. Ideal para quem quer o site pronto para uso sem se preocupar com partes técnicas.
-
-## 🚀 Como Executar o Projeto
-
-### Pré-requisitos
-- PHP >= 8.1
-- Composer
-- Node.js >= 16
-- NPM ou Yarn
-
-### Instalação
-
-1. **Clone o repositório**
-```bash
-git clone https://github.com/usuario/portfolio-gabriel
-cd portfolio-gabriel
-```
-
-2. **Instale as dependências PHP**
-```bash
-composer install
-```
-
-3. **Instale as dependências JavaScript**
-```bash
-npm install
-```
-
-4. **Configure o ambiente**
-```bash
-cp .env.example .env
-php artisan key:generate
-```
-
-5. **Execute as migrações** (se houver)
-```bash
-php artisan migrate
-```
-
-6. **Compile os assets**
-```bash
-npm run build
-# ou para desenvolvimento
-npm run dev
-```
-
-7. **Inicie o servidor**
-```bash
-php artisan serve
-```
-
-O site estará disponível em `http://localhost:8000`
-
-## 📁 Estrutura do Projeto
-
-```
-portfolio/
-├── app/                    # Lógica da aplicação Laravel
-├── resources/
-│   ├── js/
-│   │   ├── Components/     # Componentes Vue.js
-│   │   └── Pages/         # Páginas da aplicação
-│   ├── css/               # Estilos CSS
-│   └── views/             # Templates Blade
-├── public/                # Assets públicos
-├── routes/                # Definição de rotas
-└── package.json          # Dependências JavaScript
-```
-
-## 🎨 Design System
-
-### Cores Principais
-- **Primária**: Gradiente azul para roxo (`from-blue-500 to-purple-600`)
-- **Background**: Tons de cinza escuro (`gray-900`, `gray-800`)
-- **Texto**: Branco e tons de cinza para contraste
-- **Acentos**: Azul (`blue-400`), roxo (`purple-500`), verde (`green-400`)
-
-### Componentes Reutilizáveis
-- **Header**: Navegação principal com menu responsivo
-- **Footer**: Informações de contato e links
-- **Cards de Serviço**: Apresentação visual dos serviços oferecidos
-
-## 📞 Contato
-
-Interessado em trabalhar comigo? Entre em contato!
-
-- **Email**: [seu-email@exemplo.com]
-- **LinkedIn**: [Seu LinkedIn]
-- **GitHub**: [Seu GitHub]
-- **WhatsApp**: [Seu WhatsApp]
+</div>
 
 ---
 
-## 🚀 Status do Projeto
+<table align="center">
+<tr>
+<td width="50%">
 
-🔄 **Em desenvolvimento ativo** - Sempre adicionando novos projetos e melhorias
+## 💼 Meus Serviços
 
-### Próximas Funcionalidades
-- [ ] Seção de projetos com detalhes
-- [ ] Blog integrado
-- [ ] Sistema de contato funcional
-- [ ] Integração com APIs de projetos GitHub
-- [ ] Modo claro/escuro
-- [ ] Otimizações de SEO
+🌐 **Desenvolvimento Web**  
+*Sites e sistemas com Laravel*
 
-## 📄 Licença
+🔐 **Segurança de Sistemas**  
+*Hashing, criptografia e proteção*
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+☁️ **DevOps & Deploy**  
+*Automatização e hospedagem*
+
+📦 **Pacote Completo**  
+*Solução end-to-end*
+
+</td>
+<td width="50%">
+
+## 📈 Foco Atual
+
+```javascript
+const gabriel = {
+  studying: "Análise e Desenvolvimento de Sistemas",
+  specializing: ["Laravel", "Vue.js", "Security"],
+  focus: "Web Development",
+  goal: "Soluções seguras e performáticas",
+  approach: "Qualidade com preço acessível"
+};
+```
+
+</td>
+</tr>
+</table>
 
 ---
 
-**Desenvolvido com ❤️ por Gabriel Gonçalves**
+<div align="center">
 
-> "Mesmo no início da carreira, busca pela excelência e comprometimento com resultados de qualidade."
+## 🎨 Projeto Destaque
+
+### 🌟 Portfólio Pessoal
+*Site responsivo com carousel interativo, design moderno e foco em UX*
+
+**Tecnologias:** Laravel • Vue.js • Tailwind CSS • Inertia.js
+
+```html
+<div class="hero-gradient">
+  <h1>Desenvolvedor em Ascensão</h1>
+  <p>Começando com dedicação total</p>
+</div>
+```
+
+[![Visitar Site](https://img.shields.io/badge/🚀%20Visitar%20Site-gabrielgon.com.br-6366F1?style=for-the-badge&logo=rocket)](https://gabrielgon.com.br)
+
+</div>
+
+---
+
+<div align="center">
+
+## 🌟 Diferenciais
+
+<table>
+<tr>
+<td align="center" width="33%">
+  <img src="https://img.shields.io/badge/🎓-Sempre%20Estudando-4CAF50?style=for-the-badge" />
+  <br><sub><b>Conhecimento Atualizado</b></sub>
+</td>
+<td align="center" width="33%">
+  <img src="https://img.shields.io/badge/🔒-Segurança%20First-FF6B6B?style=for-the-badge" />
+  <br><sub><b>Práticas Seguras</b></sub>
+</td>
+<td align="center" width="33%">
+  <img src="https://img.shields.io/badge/💰-Preço%20Justo-FFD93D?style=for-the-badge" />
+  <br><sub><b>Valor Acessível</b></sub>
+</td>
+</tr>
+</table>
+
+</div>
+
+---
+
+<div align="center">
+
+## 📞 Vamos Conversar?
+
+<a href="mailto:gabrielgoncalves2981@gmail.com">
+  <img src="https://img.shields.io/badge/📧%20Enviar%20Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
+
+<br><br>
+
+*"Estou pronto para transformar sua ideia em realidade"*
+
+---
+
+<img src="https://github-readme-stats.vercel.app/api?username=seu-usuario&show_icons=true&theme=tokyonight&hide_border=true" width="48%" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=seu-usuario&theme=tokyonight&hide_border=true" width="48%" />
+
+<br>
+
+![](https://komarev.com/ghpvc/?username=seu-usuario&color=6366f1&style=for-the-badge)
+
+</div>
+
+---
+
+<div align="center">
+  <sub>💙 Desenvolvido com dedicação por <strong>Gabriel Gonçalves</strong></sub>
+</div>
