@@ -100,28 +100,6 @@ const gabriel = {
 
 <div align="center">
 
-## 🎨 Projeto Destaque
-
-### 🌟 Portfólio Pessoal
-*Site responsivo com carousel interativo, design moderno e foco em UX*
-
-**Tecnologias:** Laravel • Vue.js • Tailwind CSS • Inertia.js
-
-```html
-<div class="hero-gradient">
-  <h1>Desenvolvedor em Ascensão</h1>
-  <p>Começando com dedicação total</p>
-</div>
-```
-
-[![Visitar Site](https://img.shields.io/badge/🚀%20Visitar%20Site-gabrielgon.com.br-6366F1?style=for-the-badge&logo=rocket)](https://gabrielgon.com.br)
-
-</div>
-
----
-
-<div align="center">
-
 ## 🌟 Diferenciais
 
 <table>
