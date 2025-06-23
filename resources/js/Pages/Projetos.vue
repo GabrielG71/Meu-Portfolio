@@ -1,3 +1,50 @@
+<script setup>
+import { ref } from 'vue'
+import { Link } from '@inertiajs/vue3'
+import Header from '@/Components/Header.vue'
+import Footer from '@/Components/Footer.vue'
+import ProjetoModal from '@/Components/ProjetoModal.vue'
+
+const mobileMenuOpen = ref(false)
+const toggleMobileMenu = () => {
+  mobileMenuOpen.value = !mobileMenuOpen.value
+}
+
+const projetos = ref([
+  {
+    nome: 'Formata ABNT',
+    descricao: 'Ferramenta para formatar trabalhos acadêmicos automaticamente nas normas da ABNT.',
+    link: 'https://github.com/GabrielG71/Formata-ABNT'
+  },
+  {
+    nome: 'Busca de Produtos',
+    descricao: 'Sistema para busca de produtos em estoque com filtro e detalhamento.',
+    descricaoCompleta:
+      'Sistema desenvolvido em Laravel para gerenciamento de produtos empresariais com diferentes níveis de acesso. Admins podem cadastrar e editar produtos, enquanto usuários normais visualizam e controlam a saída do estoque.',
+    link: 'https://github.com/GabrielG71/busca_produto',
+    imagemCard: '/images/busca_produto_homepage.png',
+    viewImages: [
+      {
+        src: '/images/busca_produto_viewnormal.png',
+        alt: 'View Normal do Usuário'
+      },
+      {
+        src: '/images/busca_produto_viewadmin.png',
+        alt: 'View Admin com funções de edição'
+      }
+    ]
+  }
+])
+
+const modalAberto = ref(false)
+const projetoSelecionado = ref(null)
+
+function abrirModal(projeto) {
+  projetoSelecionado.value = projeto
+  modalAberto.value = true
+}
+</script>
+
 <template>
   <div class="min-h-screen bg-gray-900 text-white">
     <Header @toggle-menu="toggleMobileMenu" />
@@ -35,7 +82,14 @@
             :key="projeto.nome"
             class="bg-gradient-to-br from-gray-700/50 to-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-600 hover:border-blue-500 transition-colors"
           >
-            <div class="h-40 bg-gray-700 rounded-lg mb-4"></div>
+            <img
+              v-if="projeto.imagemCard"
+              :src="projeto.imagemCard"
+              :alt="projeto.nome"
+              class="h-40 w-full object-cover rounded-lg mb-4"
+            />
+            <div v-else class="h-40 bg-gray-700 rounded-lg mb-4"></div>
+
             <h3 class="text-xl font-bold mb-2">{{ projeto.nome }}</h3>
             <p class="text-gray-400 text-sm">{{ projeto.descricao }}</p>
             <button
@@ -58,40 +112,6 @@
     <Footer />
   </div>
 </template>
-
-<script setup>
-import { ref } from 'vue'
-import { Link } from '@inertiajs/vue3'
-import Header from '@/Components/Header.vue'
-import Footer from '@/Components/Footer.vue'
-import ProjetoModal from '@/Components/ProjetoModal.vue'
-
-const mobileMenuOpen = ref(false)
-const toggleMobileMenu = () => {
-  mobileMenuOpen.value = !mobileMenuOpen.value
-}
-
-const projetos = ref([
-  {
-    nome: 'Formata ABNT',
-    descricao: 'Ferramenta para formatar trabalhos acadêmicos automaticamente nas normas da ABNT.',
-    link: 'https://github.com/GabrielG71/Formata-ABNT'
-  },
-  {
-    nome: 'Busca de Produtos',
-    descricao: 'Sistema para busca de produtos em estoque com filtro e detalhamento.',
-    link: 'https://github.com/GabrielG71/busca_produto'
-  }
-])
-
-const modalAberto = ref(false)
-const projetoSelecionado = ref(null)
-
-function abrirModal(projeto) {
-  projetoSelecionado.value = projeto
-  modalAberto.value = true
-}
-</script>
 
 <style scoped>
 ::-webkit-scrollbar {
