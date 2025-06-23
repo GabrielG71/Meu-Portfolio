@@ -183,9 +183,12 @@
         </div>
         
         <div class="text-center">
-          <button class="bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-3 rounded-lg font-semibold hover:scale-105 transition-transform">
+          <Link 
+            :href="route('projetos')" 
+            class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-3 rounded-lg font-semibold transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:brightness-110"
+          >
             Ver Portfólio Completo
-          </button>
+          </Link>
         </div>
       </div>
     </section>
