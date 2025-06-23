@@ -41,9 +41,13 @@
           <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
             {{ slides[currentSlide].description }}
           </p>
-          <button class="bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-3 rounded-lg font-semibold hover:scale-105 transition-transform">
+          <component
+            :is="slides[currentSlide].buttonLink.startsWith('#') ? 'a' : Link"
+            :href="slides[currentSlide].buttonLink"
+            class="bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-3 rounded-lg font-semibold hover:scale-105 transition-transform inline-block"
+          >
             {{ slides[currentSlide].buttonText }}
-          </button>
+          </component>
         </div>
       </div>
 
@@ -338,22 +342,25 @@ const slides = ref([
   {
     title: 'Desenvolvedor em Ascensão',
     subtitle: 'Começando com dedicação total',
-    description: 'Embora eu esteja no início da carreira, já venho estudando e me preparando intensamente para oferecer soluções de qualidade. Cada projeto é uma chance de mostrar meu comprometimento com o resultado.',
+    description: 'Embora eu esteja no início da carreira, já venho estudando e me preparando intensamente para oferecer soluções de qualidade.',
     buttonText: 'Veja meus Projetos',
+    buttonLink: route('projetos'),
     image: 'https://images.unsplash.com/photo-1581090700227-1e8d92d296ec?w=800&h=600&fit=crop'
   },
   {
     title: 'Conhecimento Atualizado',
     subtitle: 'Sempre estudando o que há de mais moderno',
-    description: 'Mesmo no início da jornada, busco estar sempre alinhado com as melhores práticas e tecnologias do mercado, como Laravel, Vue.js, Tailwind e mais.',
+    description: 'Busco estar sempre alinhado com as melhores práticas e tecnologias do mercado, como Laravel, Vue.js, Tailwind e mais.',
     buttonText: 'Saiba mais sobre mim',
+    buttonLink: '#sobre',
     image: 'https://images.unsplash.com/photo-1584697964154-5c1d7e9a24fd?w=800&h=600&fit=crop'
   },
   {
     title: 'Qualidade com Preço Acessível',
     subtitle: 'Soluções sob medida e investimento justo',
-    description: 'Como iniciante na área de entregas, ofereço um valor mais acessível para quem busca soluções digitais com qualidade, atenção aos detalhes e um atendimento próximo.',
+    description: 'Ofereço um valor mais acessível para quem busca soluções digitais com qualidade, atenção aos detalhes e um atendimento próximo.',
     buttonText: 'Solicitar Orçamento',
+    buttonLink: '#contato',
     image: 'https://images.unsplash.com/photo-1600880291928-c0e67f7c1a49?w=800&h=600&fit=crop'
   }
 ])
@@ -361,7 +368,6 @@ const slides = ref([
 const currentSlide = ref(0)
 let slideInterval = null
 
-// Carousel methods
 const nextSlide = () => {
   currentSlide.value = (currentSlide.value + 1) % slides.value.length
 }
@@ -371,7 +377,7 @@ const previousSlide = () => {
 }
 
 const startSlideshow = () => {
-  slideInterval = setInterval(nextSlide, 5000)
+  slideInterval = setInterval(nextSlide, 9000) // Tempo aumentado para 9 segundos
 }
 
 const stopSlideshow = () => {
@@ -381,6 +387,7 @@ const stopSlideshow = () => {
   }
 }
 
+// Formulário de contato rápido
 const quickForm = ref({
   name: '',
   email: '',
@@ -394,7 +401,7 @@ const quickMessageType = ref('')
 const submitQuickContact = async () => {
   isSubmittingQuick.value = true
   quickMessage.value = ''
-  
+
   try {
     await router.post('/contact/quick', quickForm.value, {
       onSuccess: () => {
@@ -402,7 +409,7 @@ const submitQuickContact = async () => {
         quickMessage.value = 'Mensagem enviada com sucesso! Responderemos em breve.'
         quickMessageType.value = 'success'
       },
-      onError: (errors) => {
+      onError: () => {
         quickMessage.value = 'Erro ao enviar mensagem. Tente novamente.'
         quickMessageType.value = 'error'
       }
@@ -412,15 +419,12 @@ const submitQuickContact = async () => {
     quickMessageType.value = 'error'
   } finally {
     isSubmittingQuick.value = false
-    
-    // Limpar mensagem após 5 segundos
     setTimeout(() => {
       quickMessage.value = ''
     }, 5000)
   }
 }
 
-// Lifecycle
 onMounted(() => {
   startSlideshow()
 })
@@ -429,25 +433,3 @@ onUnmounted(() => {
   stopSlideshow()
 })
 </script>
-
-<style scoped>
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #1f2937;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #4f46e5;
-  border-radius: 4px;
-}
-
-</style>
