@@ -13,8 +13,21 @@ const toggleMobileMenu = () => {
 const projetos = ref([
   {
     nome: 'Formata ABNT',
-    descricao: 'Ferramenta para formatar trabalhos acadêmicos automaticamente nas normas da ABNT.',
-    link: 'https://github.com/GabrielG71/Formata-ABNT'
+    descricao: 'Editor web para formatação automática de documentos acadêmicos nas normas ABNT.',
+    descricaoCompleta:
+      'Editor web para formatação automática de documentos acadêmicos seguindo normas ABNT. Usa TinyMCE como base e aplica estilos padronizados com um clique.',
+    link: 'https://github.com/GabrielG71/Formata-ABNT',
+    imagemCard: '/images/Formatação.png',
+    viewImages: [
+      {
+        src: '/images/Formatação.png',
+        alt: 'Cabeçalho do site com a formatação utilizada'
+      },
+      {
+        src: '/images/editor_e_botão.png',
+        alt: 'Editor de texto TinyMCE com botão de formatar em ABNT'
+      }
+    ]
   },
   {
     nome: 'Busca de Produtos',
