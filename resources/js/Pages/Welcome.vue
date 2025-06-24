@@ -41,7 +41,10 @@
           <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
             {{ slides[currentSlide].description }}
           </p>
+
+          <!-- ✅ Corrigido: só renderiza se tiver link válido -->
           <component
+            v-if="slides[currentSlide].buttonLink"
             :is="slides[currentSlide].buttonLink.startsWith('#') ? 'a' : Link"
             :href="slides[currentSlide].buttonLink"
             class="bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-3 rounded-lg font-semibold hover:scale-105 transition-transform inline-block"
