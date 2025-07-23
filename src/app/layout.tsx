@@ -1,6 +1,6 @@
 import "../styles/globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/LayoutComponents/Header";
+import Footer from "@/components/LayoutComponents/Footer";
 import { ReactNode } from "react";
 
 export const metadata = {
