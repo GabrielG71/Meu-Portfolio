@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import Header from "@/components/LayoutComponents/Header";
 import Footer from "@/components/LayoutComponents/Footer";
+import Divider from "@/components/SubComponents/Divider";
 import { ReactNode } from "react";
 
 export const metadata = {
@@ -14,7 +15,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="pt-br">
       <body className="bg-[#0e1117] text-gray-800 m-0 p-0">
         <Header />
+        <Divider />
         <main className="min-h-screen">{children}</main>
+        <Divider />
         <Footer />
       </body>
     </html>
