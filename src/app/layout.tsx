@@ -4,16 +4,17 @@ import Footer from "@/components/LayoutComponents/Footer";
 import { ReactNode } from "react";
 
 export const metadata = {
-  title: "Meu Site",
-  description: "Exemplo de site com Header e Footer em React + Next.js",
+  title: "Gabriel Gonçalves - Desenvolvedor Full-Stack",
+  description:
+    "Portfólio de Gabriel Gonçalves - Desenvolvedor Full-Stack especializado em React, Next.js, Node.js e tecnologias modernas",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-br">
-      <body className="bg-white text-gray-800">
+      <body className="bg-[#0e1117] text-gray-800 m-0 p-0">
         <Header />
-        <main className="min-h-screen p-6">{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
