@@ -69,9 +69,9 @@ export default function Header() {
                 href="https://github.com/GabrielG71"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full hover:bg-gray-500/20 transition-all duration-300 hover:scale-110"
+                className="p-2 rounded-full hover:bg-purple-500/20 hover:text-purple-500 transition-all duration-300 hover:scale-110"
               >
-                <FaGithub className="text-xl hover:text-gray-400" />
+                <FaGithub className="text-xl hover:text-purple-400" />
               </a>
               <a
                 href="https://wa.me/5518998005937"
