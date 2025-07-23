@@ -84,7 +84,7 @@ export default function Header() {
             </div>
 
             <a
-              href="/cv.pdf"
+              href="/Curriculo-Gabriel-Goncalves.pdf"
               download
               className="ml-6 px-6 py-3 rounded-lg text-white font-semibold bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
             >
