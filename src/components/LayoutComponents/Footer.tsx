@@ -18,7 +18,7 @@ export default function Footer() {
 
           <div className="flex justify-center space-x-6 sm:space-x-8">
             <a
-              href="https://www.linkedin.com/in/seuusuario"
+              href="https://www.linkedin.com/in/gabriel-gonçalves-554a41311/"
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-gray-700/30 p-4 sm:p-5 rounded-2xl hover:bg-blue-500/20 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/25"
@@ -26,7 +26,7 @@ export default function Footer() {
               <FaLinkedin className="text-white text-2xl sm:text-3xl group-hover:text-blue-400 transition-colors duration-300" />
             </a>
             <a
-              href="https://github.com/seuusuario"
+              href="https://github.com/GabrielG71"
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-gray-700/30 p-4 sm:p-5 rounded-2xl hover:bg-gray-500/20 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-gray-500/25"
@@ -34,7 +34,7 @@ export default function Footer() {
               <FaGithub className="text-white text-2xl sm:text-3xl group-hover:text-gray-300 transition-colors duration-300" />
             </a>
             <a
-              href="https://wa.me/seunumerowhats"
+              href="https://wa.me/5518998005937"
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-gray-700/30 p-4 sm:p-5 rounded-2xl hover:bg-green-500/20 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-500/25"
