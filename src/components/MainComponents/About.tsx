@@ -66,7 +66,7 @@ export default function About() {
 
             <div className="pt-4">
               <a
-                href="https://github.com/GabrielG71"
+                href="https://github.com/GabrielG71?tab=repositories"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
