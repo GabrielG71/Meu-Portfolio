@@ -36,7 +36,7 @@ export default function Header() {
           <nav className="hidden lg:flex items-center space-x-8">
             <div className="flex items-center space-x-8 text-base font-medium">
               <Link
-                href="#inicio"
+                href="#"
                 className="hover:text-purple-400 transition-colors duration-300 hover:scale-110 transform"
               >
                 Início
@@ -45,25 +45,14 @@ export default function Header() {
                 href="#sobre"
                 className="hover:text-purple-400 transition-colors duration-300 hover:scale-110 transform"
               >
-                Sobre
+                Sobre mim
               </Link>
               <Link
-                href="#servicos"
-                className="hover:text-purple-400 transition-colors duration-300 hover:scale-110 transform"
-              >
-                Serviços
-              </Link>
-              <Link
-                href="#projetos"
+                href="https://github.com/GabrielG71?tab=repositories"
+                target="_blank"
                 className="hover:text-purple-400 transition-colors duration-300 hover:scale-110 transform"
               >
                 Projetos
-              </Link>
-              <Link
-                href="#contato"
-                className="hover:text-purple-400 transition-colors duration-300 hover:scale-110 transform"
-              >
-                Contato
               </Link>
             </div>
 
