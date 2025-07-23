@@ -15,7 +15,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="pt-br">
       <body className="bg-[#0e1117] text-gray-800 m-0 p-0">
         <Header />
-        <Divider />
         <main className="min-h-screen">{children}</main>
         <Divider />
         <Footer />

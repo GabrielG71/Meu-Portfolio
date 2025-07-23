@@ -1,5 +1,6 @@
 "use client";
 
+import Divider from "../SubComponents/Divider";
 import Link from "next/link";
 import { useState } from "react";
 import {
@@ -197,6 +198,7 @@ export default function Header() {
           </div>
         </div>
       </div>
+      <Divider />
     </header>
   );
 }
