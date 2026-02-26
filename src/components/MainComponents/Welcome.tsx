@@ -14,12 +14,12 @@ export default function Welcome() {
                 <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text block">
                   Desenvolvedor
                 </span>
-                <span className="text-white block">Full-Stack</span>
+                <span className="text-white block">Full-Stack / Dados</span>
               </h1>
 
               <p className="text-gray-400 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 Desenvolvimento web moderno com foco em performance,
-                escalabilidade e experiência do usuário.
+                escalabilidade e experiência do usuário. Entusiasta de Dados.
               </p>
             </div>
 
@@ -33,35 +33,86 @@ export default function Welcome() {
               </a>
             </div>
 
-            <div className="space-y-3">
-              <p className="text-gray-500 text-sm font-medium uppercase tracking-wider">
-                Tecnologias
-              </p>
-              <div className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start">
-                <span className="px-3 py-1.5 bg-blue-500/20 text-blue-400 rounded-full text-xs sm:text-sm border border-blue-500/30 hover:bg-blue-500/30 transition-colors duration-300">
-                  React
-                </span>
-                <span className="px-3 py-1.5 bg-purple-500/20 text-purple-400 rounded-full text-xs sm:text-sm border border-purple-500/30 hover:bg-purple-500/30 transition-colors duration-300">
-                  Next.js
-                </span>
-                <span className="px-3 py-1.5 bg-green-500/20 text-green-400 rounded-full text-xs sm:text-sm border border-green-500/30 hover:bg-green-500/30 transition-colors duration-300">
-                  Node.js
-                </span>
-                <span className="px-3 py-1.5 bg-yellow-500/20 text-yellow-400 rounded-full text-xs sm:text-sm border border-yellow-500/30 hover:bg-yellow-500/30 transition-colors duration-300">
-                  TypeScript
-                </span>
-                <span className="px-3 py-1.5 bg-indigo-500/20 text-indigo-400 rounded-full text-xs sm:text-sm border border-indigo-500/30 hover:bg-indigo-500/30 transition-colors duration-300">
-                  Laravel
-                </span>
-                <span className="px-3 py-1.5 bg-cyan-500/20 text-cyan-400 rounded-full text-xs sm:text-sm border border-cyan-500/30 hover:bg-cyan-500/30 transition-colors duration-300">
-                  Vue.js
-                </span>
-                <span className="px-3 py-1.5 bg-orange-500/20 text-orange-400 rounded-full text-xs sm:text-sm border border-orange-500/30 hover:bg-orange-500/30 transition-colors duration-300">
-                  MySQL
-                </span>
-                <span className="px-3 py-1.5 bg-slate-500/20 text-slate-400 rounded-full text-xs sm:text-sm border border-slate-500/30 hover:bg-slate-500/30 transition-colors duration-300">
-                  Docker
-                </span>
+            <div className="space-y-4">
+              {/* Dev Stack */}
+              <div className="space-y-2">
+                <p className="text-gray-500 text-xs font-medium uppercase tracking-widest">
+                  Desenvolvimento
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+                  <span className="px-3 py-1.5 bg-violet-500/20 text-violet-400 rounded-full text-xs sm:text-sm border border-violet-500/30 hover:bg-violet-500/30 transition-colors duration-300">
+                    PHP
+                  </span>
+                  <span className="px-3 py-1.5 bg-red-500/20 text-red-400 rounded-full text-xs sm:text-sm border border-red-500/30 hover:bg-red-500/30 transition-colors duration-300">
+                    Laravel
+                  </span>
+                  <span className="px-3 py-1.5 bg-green-500/20 text-green-400 rounded-full text-xs sm:text-sm border border-green-500/30 hover:bg-green-500/30 transition-colors duration-300">
+                    Node.js
+                  </span>
+                  <span className="px-3 py-1.5 bg-slate-500/20 text-slate-400 rounded-full text-xs sm:text-sm border border-slate-500/30 hover:bg-slate-500/30 transition-colors duration-300">
+                    Express
+                  </span>
+                  <span className="px-3 py-1.5 bg-yellow-500/20 text-yellow-400 rounded-full text-xs sm:text-sm border border-yellow-500/30 hover:bg-yellow-500/30 transition-colors duration-300">
+                    JavaScript
+                  </span>
+                  <span className="px-3 py-1.5 bg-blue-500/20 text-blue-400 rounded-full text-xs sm:text-sm border border-blue-500/30 hover:bg-blue-500/30 transition-colors duration-300">
+                    TypeScript
+                  </span>
+                  <span className="px-3 py-1.5 bg-emerald-500/20 text-emerald-400 rounded-full text-xs sm:text-sm border border-emerald-500/30 hover:bg-emerald-500/30 transition-colors duration-300">
+                    Vue.js
+                  </span>
+                  <span className="px-3 py-1.5 bg-cyan-500/20 text-cyan-400 rounded-full text-xs sm:text-sm border border-cyan-500/30 hover:bg-cyan-500/30 transition-colors duration-300">
+                    React
+                  </span>
+                </div>
+              </div>
+
+              {/* Data Stack */}
+              <div className="space-y-2">
+                <p className="text-gray-500 text-xs font-medium uppercase tracking-widest">
+                  Dados
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+                  <span className="px-3 py-1.5 bg-blue-500/20 text-blue-400 rounded-full text-xs sm:text-sm border border-blue-500/30 hover:bg-blue-500/30 transition-colors duration-300">
+                    Python
+                  </span>
+                  <span className="px-3 py-1.5 bg-yellow-500/20 text-yellow-400 rounded-full text-xs sm:text-sm border border-yellow-500/30 hover:bg-yellow-500/30 transition-colors duration-300">
+                    PySpark
+                  </span>
+                  <span className="px-3 py-1.5 bg-purple-500/20 text-purple-400 rounded-full text-xs sm:text-sm border border-purple-500/30 hover:bg-purple-500/30 transition-colors duration-300">
+                    Pandas
+                  </span>
+                  <span className="px-3 py-1.5 bg-sky-500/20 text-sky-400 rounded-full text-xs sm:text-sm border border-sky-500/30 hover:bg-sky-500/30 transition-colors duration-300">
+                    SQL
+                  </span>
+                  <span className="px-3 py-1.5 bg-orange-500/20 text-orange-400 rounded-full text-xs sm:text-sm border border-orange-500/30 hover:bg-orange-500/30 transition-colors duration-300">
+                    MySQL
+                  </span>
+                  <span className="px-3 py-1.5 bg-indigo-500/20 text-indigo-400 rounded-full text-xs sm:text-sm border border-indigo-500/30 hover:bg-indigo-500/30 transition-colors duration-300">
+                    PostgreSQL
+                  </span>
+                  <span className="px-3 py-1.5 bg-teal-500/20 text-teal-400 rounded-full text-xs sm:text-sm border border-teal-500/30 hover:bg-teal-500/30 transition-colors duration-300">
+                    ETL / Pipelines
+                  </span>
+                </div>
+              </div>
+
+              {/* DevOps Stack */}
+              <div className="space-y-2">
+                <p className="text-gray-500 text-xs font-medium uppercase tracking-widest">
+                  DevOps & Ferramentas
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+                  <span className="px-3 py-1.5 bg-blue-500/20 text-blue-400 rounded-full text-xs sm:text-sm border border-blue-500/30 hover:bg-blue-500/30 transition-colors duration-300">
+                    Docker
+                  </span>
+                  <span className="px-3 py-1.5 bg-red-500/20 text-red-400 rounded-full text-xs sm:text-sm border border-red-500/30 hover:bg-red-500/30 transition-colors duration-300">
+                    Git
+                  </span>
+                  <span className="px-3 py-1.5 bg-slate-500/20 text-slate-400 rounded-full text-xs sm:text-sm border border-slate-500/30 hover:bg-slate-500/30 transition-colors duration-300">
+                    Linux
+                  </span>
+                </div>
               </div>
             </div>
           </div>
