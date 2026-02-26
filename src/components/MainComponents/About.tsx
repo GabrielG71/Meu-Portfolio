@@ -21,46 +21,38 @@ export default function About() {
                   Gabriel Gonçalves
                 </span>
                 , desenvolvedor de 18 anos apaixonado por tecnologia e inovação.
-                Natural de Cândido Mota – SP, atualmente curso
+                Natural de Assis – SP, curso{" "}
                 <span className="text-purple-400 font-semibold">
-                  {" "}
                   Análise e Desenvolvimento de Sistemas
                 </span>{" "}
-                na FATEC de Ourinhos - SP.
+                na FATEC Ourinhos e atuo tanto em desenvolvimento web quanto em
+                análise de dados.
               </p>
 
               <p className="text-gray-300 text-lg leading-relaxed">
-                Trabalho como{" "}
+                No{" "}
                 <span className="text-blue-400 font-semibold">
-                  estagiário na AGI Brasil
+                  desenvolvimento web
                 </span>
-                , empresa do setor agrícola, enquanto desenvolvo projetos
-                pessoais focados em
-                <span className="text-purple-400 font-semibold">
-                  {" "}
-                  desenvolvimento web moderno
-                </span>{" "}
-                e melhores práticas de programação.
+                , tenho experiência com JavaScript/TypeScript, React, Next.js,
+                Node.js e Express, além de bancos relacionais (PostgreSQL,
+                MySQL) e NoSQL (MongoDB, Redis), aplicando Clean Code e
+                arquitetura MVC em projetos práticos.
               </p>
 
               <p className="text-gray-300 text-lg leading-relaxed">
-                Minha stack principal inclui{" "}
-                <span className="text-blue-400 font-semibold">
-                  React, Node.js, TypeScript e Laravel
-                </span>
-                , sempre aplicando conceitos de{" "}
+                Na{" "}
                 <span className="text-purple-400 font-semibold">
-                  DevOps, testes automatizados
-                </span>{" "}
-                e metodologias ágeis. Tenho{" "}
+                  análise de dados
+                </span>
+                , trabalho com pipelines ETL/ELT, Python com Pandas, SQL, Azure,
+                Databricks e visualização com Power BI e Excel. Tenho
+                familiaridade com Docker, CI/CD e deploy em Vercel, além de
+                interesse crescente em segurança da informação. Inglês{" "}
                 <span className="text-green-400 font-semibold">
-                  inglês nível B2
-                </span>
-                {", "}
-                <span className="text-orange-400 font-semibold">
-                  espanhol intermediário
+                  avançado B2
                 </span>{" "}
-                e interesse crescente em segurança da informação.
+                para comunicação técnica oral e escrita.
               </p>
             </div>
 
@@ -112,6 +104,7 @@ export default function About() {
           </div>
 
           <div className="space-y-8">
+            {/* Formação */}
             <div className="bg-gray-800/30 rounded-2xl p-6 lg:p-8 border border-gray-700/50 hover:border-blue-500/30 transition-colors duration-300">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
@@ -131,7 +124,7 @@ export default function About() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
                     />
                   </svg>
                 </div>
@@ -155,7 +148,12 @@ export default function About() {
                       <p className="text-gray-400 text-sm">FATEC Ourinhos</p>
                     </div>
                   </div>
-                  <p className="text-gray-500 text-xs ml-11">2024 - Cursando</p>
+                  <p className="text-gray-500 text-xs ml-11">
+                    Fev 2025 – Nov 2027
+                  </p>
+                  <p className="text-gray-400 text-xs mt-1 ml-11">
+                    Python, Excel, PowerBI, Banco de Dados, Git e versionamento
+                  </p>
                 </div>
 
                 <div className="border-l-2 border-blue-500 pl-4">
@@ -177,6 +175,7 @@ export default function About() {
               </div>
             </div>
 
+            {/* Experiência */}
             <div className="bg-gray-800/30 rounded-2xl p-6 lg:p-8 border border-gray-700/50 hover:border-green-500/30 transition-colors duration-300">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center">
@@ -200,6 +199,57 @@ export default function About() {
               </div>
 
               <div className="space-y-6">
+                {/* AETA */}
+                <div className="border-l-2 border-purple-500 pl-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <img
+                      src="/images/aeta_logo.jpg"
+                      alt="AETA"
+                      className="w-8 h-8 rounded object-contain"
+                    />
+                    <div>
+                      <h4 className="font-semibold text-purple-400">
+                        Desenvolvedor Backend
+                      </h4>
+                      <p className="text-gray-400 text-sm">AETA</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-500 text-xs ml-11">
+                    Jan 2025 – Presente
+                  </p>
+                  <p className="text-gray-300 text-sm mt-2 ml-11">
+                    Desenvolvimento de API REST para controle e administração
+                    com Laravel e integração no sistema com TypeScript.
+                  </p>
+                </div>
+
+                {/* Informática Ourinhos */}
+                <div className="border-l-2 border-cyan-500 pl-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <img
+                      src="/images/informatica_ourinhos_logo.jpg"
+                      alt="Informática Ourinhos"
+                      className="w-8 h-8 rounded object-contain"
+                    />
+                    <div>
+                      <h4 className="font-semibold text-cyan-400">
+                        Estagiário de TI
+                      </h4>
+                      <p className="text-gray-400 text-sm">
+                        Informática Ourinhos
+                      </p>
+                    </div>
+                  </div>
+                  <p className="text-gray-500 text-xs ml-11">
+                    Out 2025 – Nov 2025 · 2 meses
+                  </p>
+                  <p className="text-gray-300 text-sm mt-2 ml-11">
+                    Desenvolvimento de planilhas com Excel e otimização e reparo
+                    de hardwares físicos.
+                  </p>
+                </div>
+
+                {/* AGI Brasil */}
                 <div className="border-l-2 border-green-500 pl-4">
                   <div className="flex items-center gap-3 mb-2">
                     <img
@@ -209,45 +259,23 @@ export default function About() {
                     />
                     <div>
                       <h4 className="font-semibold text-green-400">
-                        Estagiário - Área de Compras
+                        Estagiário – Área de Compras
                       </h4>
                       <p className="text-gray-400 text-sm">AGI Brasil</p>
                     </div>
                   </div>
                   <p className="text-gray-500 text-xs ml-11">
-                    Fev 2025 - Até o Momento
+                    Abr 2024 – Set 2025 · 1 ano e 6 meses
                   </p>
                   <p className="text-gray-300 text-sm mt-2 ml-11">
-                    Suporte às operações de compras e processos administrativos
-                    em empresa do agronegócio.
-                  </p>
-                </div>
-
-                <div className="border-l-2 border-blue-500 pl-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <img
-                      src="/images/agibrasil_logo.jpg"
-                      alt="AGI Brasil"
-                      className="w-8 h-8 rounded object-contain"
-                    />
-                    <div>
-                      <h4 className="font-semibold text-blue-400">
-                        Jovem Aprendiz
-                      </h4>
-                      <p className="text-gray-400 text-sm">AGI Brasil</p>
-                    </div>
-                  </div>
-                  <p className="text-gray-500 text-xs ml-11">
-                    Abr 2024 - Fev 2025 • 11 meses
-                  </p>
-                  <p className="text-gray-300 text-sm mt-2 ml-11">
-                    Primeiro contato profissional no setor agrícola,
-                    desenvolvendo habilidades em processos administrativos.
+                    Desenvolvimento de relatórios, criação e otimização de
+                    planilhas e dashboards com Excel e Power BI.
                   </p>
                 </div>
               </div>
             </div>
 
+            {/* Idiomas */}
             <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-6 border border-blue-500/20">
               <h4 className="font-semibold text-white mb-4 flex items-center gap-2">
                 <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
@@ -259,9 +287,6 @@ export default function About() {
                 </span>
                 <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm border border-green-500/30">
                   Inglês B2
-                </span>
-                <span className="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm border border-orange-500/30">
-                  Espanhol Intermediário
                 </span>
               </div>
             </div>
