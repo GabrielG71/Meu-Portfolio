@@ -20,37 +20,37 @@ export default function About() {
                 <span className="text-blue-400 font-semibold">
                   Gabriel Gonçalves
                 </span>
-                , desenvolvedor de 18 anos apaixonado por tecnologia e inovação.
-                Natural de Assis – SP, curso{" "}
+                , desenvolvedor Backend apaixonado por construir sistemas
+                escaláveis e bem estruturados. Natural de Assis – SP, curso{" "}
                 <span className="text-purple-400 font-semibold">
                   Análise e Desenvolvimento de Sistemas
                 </span>{" "}
-                na FATEC Ourinhos e atuo tanto em desenvolvimento web quanto em
-                análise de dados.
+                na FATEC Ourinhos e atuo com desenvolvimento de APIs e
+                microsserviços em produção.
               </p>
 
               <p className="text-gray-300 text-lg leading-relaxed">
-                No{" "}
+                Minha stack principal é{" "}
                 <span className="text-blue-400 font-semibold">
-                  desenvolvimento web
+                  Java com Spring Boot
+                </span>{" "}
+                (Spring Security, Spring Data JPA, Hibernate) e{" "}
+                <span className="text-purple-400 font-semibold">
+                  TypeScript com NestJS
                 </span>
-                , tenho experiência com JavaScript/TypeScript, React, Next.js,
-                Node.js e Express, além de bancos relacionais (PostgreSQL,
-                MySQL) e NoSQL (MongoDB, Redis), aplicando Clean Code e
-                arquitetura MVC em projetos práticos.
+                , com bancos relacionais (PostgreSQL, MySQL) e práticas de Clean
+                Architecture, JWT e segurança de APIs.
               </p>
 
               <p className="text-gray-300 text-lg leading-relaxed">
-                Na{" "}
+                Tenho experiência prática em{" "}
                 <span className="text-purple-400 font-semibold">
-                  análise de dados
+                  ambientes de produção
                 </span>
-                , trabalho com pipelines ETL/ELT, Python com Pandas, SQL, Azure,
-                Databricks e visualização com Power BI e Excel. Tenho
-                familiaridade com Docker, CI/CD e deploy em Vercel, além de
-                interesse crescente em segurança da informação. Inglês{" "}
+                , incluindo resposta a incidentes de segurança, containerização
+                com Docker e CI/CD. Inglês{" "}
                 <span className="text-green-400 font-semibold">
-                  avançado B2
+                  C1 avançado
                 </span>{" "}
                 para comunicação técnica oral e escrita.
               </p>
@@ -218,8 +218,10 @@ export default function About() {
                     Jan 2025 – Presente
                   </p>
                   <p className="text-gray-300 text-sm mt-2 ml-11">
-                    Desenvolvimento de API REST para controle e administração
-                    com Laravel e integração no sistema com TypeScript.
+                    Automatizou ~97% dos fluxos administrativos com TypeScript e
+                    PostgreSQL em sistema com 500 usuários ativos. Integrou APIs
+                    de LLM, Google Drive e QR code. Liderou resposta a incidente
+                    de segurança via isolamento Docker.
                   </p>
                 </div>
 
@@ -286,7 +288,7 @@ export default function About() {
                   Português Nativo
                 </span>
                 <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm border border-green-500/30">
-                  Inglês B2
+                  Inglês C1
                 </span>
               </div>
             </div>
